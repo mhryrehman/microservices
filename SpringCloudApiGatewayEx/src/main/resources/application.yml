@@ -1,0 +1,29 @@
+server:
+  port: 8080
+  
+spring:
+  application:
+    name: API-Gateway
+  #cloud:
+   # gateway:
+    #  routes:
+     #   - id: cartServiceApp
+      #    uri: lb://CART-SERVICE
+       #   predicates:
+        #    - Path=/cart/**
+        #- id: orderServiceApp
+         # uri: lb://ORDER-SERVICE
+         # predicates:
+         #   - Path=/order/**
+      #discovery:
+       # locator:
+        #  enabled: true
+          
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
